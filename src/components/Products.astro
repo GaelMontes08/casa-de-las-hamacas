@@ -1,0 +1,118 @@
+---
+const products = [
+  {
+    name: "Hamaca Tradicional",
+    description: "Clásica hamaca tejida a mano con hilos de algodón de alta calidad. Perfecta para interiores y exteriores.",
+    price: "$1,299",
+    features: ["100% Algodón", "Soporta 150kg", "2.80m de largo"],
+    color: "from-primary-400 to-primary-600"
+  },
+  {
+    name: "Hamaca Deluxe",
+    description: "Hamaca premium con diseño contemporáneo y tejido reforzado. Máxima comodidad y durabilidad.",
+    price: "$1,799",
+    features: ["Algodón Premium", "Soporta 200kg", "3.20m de largo"],
+    color: "from-secondary-400 to-secondary-600",
+    featured: true
+  },
+  {
+    name: "Hamaca Familiar",
+    description: "Amplia y resistente, ideal para disfrutar en familia. Diseño espacioso con acabados de lujo.",
+    price: "$2,299",
+    features: ["Extra Grande", "Soporta 250kg", "3.50m de largo"],
+    color: "from-primary-500 to-primary-700"
+  }
+];
+---
+
+<section id="productos" class="py-24 bg-gradient-to-b from-white to-neutral-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
+        Nuestra Colección
+      </h2>
+      <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+        Encuentra la hamaca perfecta para tu espacio y estilo de vida
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {products.map((product) => (
+        <div class={`relative group ${product.featured ? 'lg:scale-105' : ''}`}>
+          {product.featured && (
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+              <span class="bg-secondary-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                Más Popular
+              </span>
+            </div>
+          )}
+          
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-full flex flex-col">
+            {/* Image placeholder */}
+            <div class={`aspect-[4/3] bg-gradient-to-br ${product.color} relative overflow-hidden`}>
+              <div class="absolute inset-0 flex items-center justify-center text-white/30">
+                <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                </svg>
+              </div>
+              
+              {/* Hover overlay */}
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="font-display text-2xl font-bold text-neutral-900 mb-2">
+                {product.name}
+              </h3>
+              
+              <p class="text-neutral-600 mb-4 flex-1">
+                {product.description}
+              </p>
+
+              <div class="space-y-2 mb-4">
+                {product.features.map((feature) => (
+                  <div class="flex items-center text-sm text-neutral-700">
+                    <svg class="w-4 h-4 text-secondary-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </div>
+                ))}
+              </div>
+
+              <div class="flex items-center justify-between pt-4 border-t border-neutral-200">
+                <span class="font-display text-3xl font-bold text-primary-600">
+                  {product.price}
+                </span>
+                <a 
+                  href="#contacto" 
+                  class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-full transition-colors"
+                >
+                  Cotizar
+                  <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 text-center">
+      <p class="text-neutral-600 mb-6">
+        ¿Necesitas un diseño personalizado? Podemos crear la hamaca perfecta para ti.
+      </p>
+      <a 
+        href="#contacto" 
+        class="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 hover:bg-primary-50 font-medium rounded-full transition-colors"
+      >
+        Solicitar Personalización
+        <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

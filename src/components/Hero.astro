@@ -1,0 +1,114 @@
+---
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-secondary-50"></div>
+  
+  <!-- Decorative circles -->
+  <div class="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+  <div class="absolute top-40 right-10 w-72 h-72 bg-secondary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+  <div class="absolute -bottom-8 left-20 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text content -->
+      <div class="space-y-8">
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 leading-tight">
+          Relájate en
+          <span class="text-primary-600">Estilo</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
+          Descubre nuestra colección exclusiva de hamacas artesanales. 
+          Cada pieza está cuidadosamente elaborada para brindarte la máxima 
+          comodidad y transformar tu espacio en un oasis de tranquilidad.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#productos" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-primary-600 hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl">
+            Ver Colección
+            <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          
+          <a href="#contacto" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-base font-medium rounded-full text-primary-600 bg-transparent hover:bg-primary-50 transition-colors">
+            Contactar
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-8 pt-8 border-t border-neutral-200">
+          <div>
+            <div class="text-3xl font-bold text-primary-600">15+</div>
+            <div class="text-sm text-neutral-600">Años de experiencia</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-primary-600">100%</div>
+            <div class="text-sm text-neutral-600">Artesanales</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-primary-600">5★</div>
+            <div class="text-sm text-neutral-600">Satisfacción</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image placeholder -->
+      <div class="relative">
+        <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 shadow-2xl overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-white/20">
+            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+          </div>
+        </div>
+        
+        <!-- Floating badge -->
+        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-secondary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-neutral-900">Calidad Premium</div>
+              <div class="text-sm text-neutral-600">Garantizada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style>
